@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+const mkmsg = require('../lib/mkmsg');
+const git = require('../lib/git');
+
+git.readMsg(msg => {
+  git.readBranch(branch => {
+    git.writeMsg(mkmsg(msg, branch));
+  });
+});

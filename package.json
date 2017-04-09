@@ -1,0 +1,45 @@
+{
+  "name": "husky-pivotal",
+  "version": "1.0.0",
+  "description": "Husky Git hooks for Pivotal Tracker.",
+  "scripts": {
+    "pretest": "eslint \"{bin,lib}/**\"",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/redoPop/husky-pivotal.git"
+  },
+  "keywords": [
+    "pivotal",
+    "husky",
+    "git",
+    "hook",
+    "hooks"
+  ],
+  "bin": {
+    "hup-ckbranch": "./bin/hup-ckbranch",
+    "hup-ckmsg": "./bin/hup-ckmsg",
+    "hup-mkmsg": "./bin/hup-mkmsg"
+  },
+  "author": "Joe Bartlett <joe@redopop.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/redoPop/husky-pivotal/issues"
+  },
+  "homepage": "https://github.com/redoPop/husky-pivotal#readme",
+  "engines": {
+    "node": ">=6.9.1",
+    "npm": ">=3.10.8"
+  },
+  "peerDependencies": {
+    "husky": "^0.13.3"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "jest": "^19.0.2"
+  }
+}

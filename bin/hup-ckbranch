@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+const ckbranch = require('../lib/ckbranch');
+const git = require('../lib/git');
+const ruhroh = require('../lib/ruhroh');
+
+git.readBranch(branch => {
+  if (branch) ckbranch(branch) || ruhroh([
+    'RUH ROH: 💥',
+    'No Pivotal Tracker Story ID found in branch name.',
+    'Remove the hup-ckbranch hook if this message gets annoying.',
+  ]);
+});

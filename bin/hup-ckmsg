@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const ckmsg = require('../lib/ckmsg');
+const git = require('../lib/git');
+const ruhroh = require('../lib/ruhroh');
+
+git.readMsg(msg => {
+  ckmsg(msg) || ruhroh([
+    'RUH ROH: 💥',
+    'No Pivotal Tracker Story found in commit message.',
+    'Should look like: [#123456] where 123456 is the Story ID.',
+    'Remove the hup-ckmsg hook if this message gets annoying.',
+  ]);
+});
