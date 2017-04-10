@@ -1,4 +1,4 @@
-# Husky + Pivotal
+# Husky + Pivotal [![NPM Version](https://img.shields.io/npm/v/husky-pivotal.svg?style=flat)](https://npmjs.org/package/husky-pivotal) [![Build Status](https://travis-ci.org/redoPop/husky-pivotal.svg?branch=master)](https://travis-ci.org/redoPop/husky-pivotal)
 
 [Husky](https://github.com/typicode/husky) Git hooks to check that the team's commits are [associated with Pivotal Tracker stories.](https://www.pivotaltracker.com/help/api#Tracker_Updates_in_SCM_Post_Commit_Hooks)
 
