@@ -33,7 +33,7 @@
     "npm": ">=3.10.8"
   },
   "peerDependencies": {
-    "husky": "^0.14.3"
+    "husky": ">=0.13.0 <2.0.0"
   },
   "dependencies": {
     "chalk": "^2.4.1"
