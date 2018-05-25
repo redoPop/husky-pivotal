@@ -1,9 +1,7 @@
 # Husky + Pivotal [![NPM Version](https://img.shields.io/npm/v/husky-pivotal.svg?style=flat)](https://npmjs.org/package/husky-pivotal) [![Build Status](https://travis-ci.org/redoPop/husky-pivotal.svg?branch=master)](https://travis-ci.org/redoPop/husky-pivotal)
-
 [Husky](https://github.com/typicode/husky) commands to check that commits are tied to [Pivotal Tracker](https://www.pivotaltracker.com) stories.
 
 ## Installation
-
 ```
 npm install husky husky-pivotal --save-dev
 ```
@@ -21,7 +19,6 @@ Then add the hook commands to your project's package.json, via the "scripts" fie
 You can pick and choose the hook commands most appropriate to your project and preferences.
 
 ## About the hooks
-
 Several hook commands are included with this package:
 
 | Hook | Command | Description
@@ -33,5 +30,4 @@ Several hook commands are included with this package:
 You may not want to use every one of these commands: simply omit the ones you don't want from your npm scripts.
 
 ## License
-
 [MIT](LICENSE)
