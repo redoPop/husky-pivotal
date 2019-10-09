@@ -33,13 +33,14 @@
     "npm": ">=3.10.8"
   },
   "peerDependencies": {
-    "husky": ">=0.13.0 <2.0.0"
+    "husky": ">=0.13.0"
   },
   "dependencies": {
-    "chalk": "^2.4.1"
+    "chalk": "^2.4.0"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
-    "jest": "^23.6.0"
+    "eslint": "^6.0.0",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0"
   }
 }
