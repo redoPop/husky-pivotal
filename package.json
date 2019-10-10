@@ -1,6 +1,6 @@
 {
   "name": "husky-pivotal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Husky Git hooks for Pivotal Tracker.",
   "scripts": {
     "pretest": "eslint \"{bin,lib}/**\"",
