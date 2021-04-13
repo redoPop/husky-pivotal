@@ -3,6 +3,12 @@
     "node": true
   },
   "extends": "eslint:recommended",
+  "overrides": [
+    {
+      "files": ["*.test.js"],
+      "env": { "jest": true }
+    }
+  ],
   "parserOptions": {
     "ecmaVersion": 6
   }

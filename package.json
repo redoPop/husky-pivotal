@@ -28,19 +28,15 @@
     "url": "https://github.com/redoPop/husky-pivotal/issues"
   },
   "homepage": "https://github.com/redoPop/husky-pivotal#readme",
-  "engines": {
-    "node": ">=6.9.1",
-    "npm": ">=3.10.8"
-  },
   "peerDependencies": {
-    "husky": ">=0.13.0"
+    "husky": ">=6"
   },
   "dependencies": {
-    "chalk": "^2.4.0"
+    "chalk": "^4"
   },
   "devDependencies": {
-    "eslint": "^6.0.0",
-    "husky": "^3.0.0",
-    "jest": "^24.8.0"
+    "eslint": "^7",
+    "husky": "^6",
+    "jest": "^26"
   }
 }
