@@ -1,4 +1,4 @@
-# Husky + Pivotal [![NPM Version](https://img.shields.io/npm/v/husky-pivotal.svg?style=flat)](https://npmjs.org/package/husky-pivotal) [![Build Status](https://travis-ci.org/redoPop/husky-pivotal.svg?branch=master)](https://travis-ci.org/redoPop/husky-pivotal)
+# Husky + Pivotal [![NPM Version](https://img.shields.io/npm/v/husky-pivotal.svg?style=flat)](https://npmjs.org/package/husky-pivotal) [![Build Status](https://travis-ci.org/redoPop/husky-pivotal.svg?branch=main)](https://travis-ci.org/redoPop/husky-pivotal)
 [Husky](https://github.com/typicode/husky) hook commands to keep commits tied to [Pivotal Tracker](https://www.pivotaltracker.com) stories.
 
 ## Installation
