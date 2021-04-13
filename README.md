@@ -1,35 +1,44 @@
 # Husky + Pivotal [![NPM Version](https://img.shields.io/npm/v/husky-pivotal.svg?style=flat)](https://npmjs.org/package/husky-pivotal) [![Build Status](https://travis-ci.org/redoPop/husky-pivotal.svg?branch=master)](https://travis-ci.org/redoPop/husky-pivotal)
-[Husky](https://github.com/typicode/husky) commands to check that commits are tied to [Pivotal Tracker](https://www.pivotaltracker.com) stories.
+[Husky](https://github.com/typicode/husky) hook commands to keep commits tied to [Pivotal Tracker](https://www.pivotaltracker.com) stories.
 
 ## Installation
+1. [Set up Husky](https://typicode.github.io/husky/)
+2. `npm install husky-pivotal --save-dev`
+3. Add one or more of the hook commands to suit your needs:
+
+## Hook commands
+<details><summary><strong>hup-mkmsg</strong> automatically adds story references to new commits</summary>
+
+The `hup-mkmsg` command looks for a Pivotal Tracker Story ID in the current branch name and then uses it to prefill new commit messages with a [[#____] format](https://www.pivotaltracker.com/help/api#Tracker_Updates_in_SCM_Post_Commit_Hooks) story reference. For example, if you're working in a branch named `123456-new-feature` then `[#123456]` will be prefilled in new commit messages created within that branch.
+
+To use this command, add `hup-mkmsg` to your Husky `prepare-commit-msg` hook:
+
 ```
-npm install husky husky-pivotal --save-dev
+npx husky add .husky/prepare-commit-msg 'npx --no-install hup-mkmsg "$1"'
 ```
+</details>
 
-Then add the hook commands to your project's package.json, via the "scripts" field:
+<details><summary><strong>hup-ckmsg</strong> disallows commits without story references</summary>
 
-```json
-"husky": {
-  "hooks": {
-    "commit-msg": "hup-ckmsg",
-    "pre-commit": "hup-ckbranch",
-    "prepare-commit-msg": "hup-mkmsg"
-  }
-}
+The `hup-ckmsg` command checks that commit messages contain a [[#____] format](https://www.pivotaltracker.com/help/api#Tracker_Updates_in_SCM_Post_Commit_Hooks) story reference. The commit is aborted if it doesn't contain a story reference.
+
+To use this command, add `hup-ckmsg` to your Husky `commit-msg` hook:
+
 ```
+npx husky add .husky/commit-msg 'npx --no-install hup-ckmsg "$1"'
+```
+</details>
 
-You can pick and choose the hook commands most appropriate to your project and preferences.
+<details><summary><strong>hup-ckbranch</strong> disallows commits outside of story branches</summary>
 
-## About the hooks
-Several hook commands are included with this package:
+The `hup-ckbranch` command checks that the current branch name contains a Pivotal Tracker Story ID. Commits are aborted if the branch name doesn't contain a Story ID.
 
-| Hook | Command | Description
-| :--- | :------ | :----------
-| `prepare-commit-msg` | `hup-mkmsg` | Looks for a story ID in the current branch name and then uses it to prefill commit messages with a [[#____] format](https://www.pivotaltracker.com/help/api#Tracker_Updates_in_SCM_Post_Commit_Hooks) story reference.
-| `commit-msg` | `hup-ckmsg` | Ensures that the commit message contains a [[#____] format](https://www.pivotaltracker.com/help/api#Tracker_Updates_in_SCM_Post_Commit_Hooks) story reference; aborts the commit if not.
-| `pre-commit` | `hup-ckbranch` | Ensures that the current branch name contains a Pivotal Tracker story ID; aborts the commit if not.
+To use this command, add `hup-ckbranch` to your Husky `pre-commit` hook:
 
-You may not want to use every one of these commands: simply omit the ones you don't want from your npm scripts.
+```
+npx husky add .husky/pre-commit 'npx --no-install ckbranch'
+```
+</details>
 
 ## License
 [MIT](LICENSE)
