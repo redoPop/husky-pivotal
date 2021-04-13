@@ -24,6 +24,11 @@
   },
   "author": "Joe Bartlett <joe@redopop.com>",
   "license": "MIT",
+  "files": [
+    "bin",
+    "lib",
+    "!__tests__"
+  ],
   "bugs": {
     "url": "https://github.com/redoPop/husky-pivotal/issues"
   },
